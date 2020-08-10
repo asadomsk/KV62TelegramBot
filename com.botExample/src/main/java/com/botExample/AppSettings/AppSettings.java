@@ -13,7 +13,7 @@ public class AppSettings {
 	public String getBotUserName() {
 		return this.botUserName;
 	}
-	
+	//main
 
 
 	public String getBotToken() {
