@@ -12,8 +12,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import com.botExample.AppSettings.AppSettings;
-import com.botExample.Commands.Command;
-import com.botExample.Commands.HelloCommand;
+import com.botExample.Commands.Callback;
+import com.botHandler.Handler;
+import com.botHandler.WeatherHandlerImpl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -26,12 +27,11 @@ import org.slf4j.LoggerFactory;
 @Component
 public class KV62Bot extends TelegramWebhookBot {
 	
-	private List <Command> commandsList;
+	private List <Handler> commandsList;
 	
 	@Autowired
 	AppSettings ap;
-	@Autowired
-	HelloCommand hc;
+	
 	/**
 	 * The Logger for this class.
 	 */
@@ -39,15 +39,15 @@ public class KV62Bot extends TelegramWebhookBot {
 
 	@PostConstruct
 	public void setCommands() {
-	commandsList =new LinkedList<Command>();
-	commandsList.add(new HelloCommand());
+	commandsList =new LinkedList<Handler>();
+	commandsList.add(new WeatherHandlerImpl()); //todo
 	//todo all commands
 	}
 
 	
 	public BotApiMethod onWebhookUpdateReceived(Update update) {
-		  //return hc.Execute(update, this);
-		    return null;
+		
+		return null;
 		}
 		
 
@@ -69,20 +69,20 @@ public class KV62Bot extends TelegramWebhookBot {
 	
 
 
-	public List<Command> getCommandsList() {
+	public List<Handler> getCommandsList() {
 		return commandsList;
 	}
 
 
-	public void setCommandsList(List<Command> commandsList) {
+	public void setCommandsList(List<Handler> commandsList) {
 		this.commandsList = commandsList;
 	}
 	@Override
 	public String toString() {
 		String command=null;
 		if(commandsList!=null) {
-			for(Command c: commandsList)
-		        command+= c.getName();
+			for(Handler h: commandsList)
+		        command+= h.getName();
 	        }
 		return command;
 
