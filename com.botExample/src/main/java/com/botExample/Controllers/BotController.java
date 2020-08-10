@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import com.botExample.Commands.Command;
-import com.botExample.Commands.HelloCommand;
 import com.botExample.POJO.KV62Bot;
+import com.botHandler.Handler;
+import com.botWeather.Weather;
 
 @RestController
 public class BotController {
@@ -22,19 +22,15 @@ public class BotController {
 	@Autowired
 	private KV62Bot telegramBot;
 
-	@Async
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public BotApiMethod onUpdateReceived(@RequestBody Update update) {
 		// return telegramBot.onWebhookUpdateReceived(update);
-		if(telegramBot.getCommandsList()!=null) {
+		if (telegramBot.getCommandsList() != null) {
 			logger.info("command exists");
-		for(Command c: telegramBot.getCommandsList()) {
-			logger.info(c.getName());
-			if(c.Contains(update.getMessage().getText(),telegramBot) ) {
-		       c.Execute(update, telegramBot);
-			   break;
-			}else logger.info("command doen't exist");
-		} 
+			for (Handler c : telegramBot.getCommandsList()) {
+				logger.info(c.getName());
+				c.Execute(update, telegramBot);
+			}
 		}
 
 		return null;
