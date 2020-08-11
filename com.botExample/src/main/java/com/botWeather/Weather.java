@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,23 @@ public class Weather {
 		}
 		
 		in.close();
+		JSONObject object=new JSONObject(result);
+		model.setName(object.getString("name"));
+		JSONObject main= object.getJSONObject("main");
+		model.setTemp(main.getDouble("temp"));
+		model.setHumidity(main.getDouble("humidity"));
+		JSONArray getArray=object.getJSONArray("weather");
+		for(int i=0;i<getArray.length();i++) {
+			JSONObject obj=getArray.getJSONObject(i);
+			model.setIcon((String)obj.get("icon"));
+			model.setMain(obj.getString("main"));
+			
+		}
+		result= "City: " + model.getName()+ "\n" +
+	            "Temperature: " + model.getTemp() + "\n" +
+				"Humidity: " + model.getHumidity() + "\n" +
+	            "Main: " + model.getMain() +"\n" +
+	            "http://openweathermap.org/img/wn/" + model.getIcon() + "@2x.png";
 		return result;
 	}
 	

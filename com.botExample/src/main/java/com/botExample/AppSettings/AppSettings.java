@@ -8,7 +8,7 @@ public class AppSettings {
 	
 	private String botToken="1320794276:AAFVXgxTxxWyrLE1jvTEC_QDGvdE0gfF9EM";
 
-    private String botPath ="https://542f3a421791.ngrok.io";
+    private String botPath ="https://458e190e5d47.ngrok.io";
 
 	public String getBotUserName() {
 		return this.botUserName;
