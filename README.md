@@ -12,9 +12,17 @@ Is should be the real strong personal mobile assistant.
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
 
-Currently weather (json format) command is supported:
 
 WeatherKV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
+
+The Bot will return answer in the next format
+
+City: Saint Petersburg
+Temperature: 13.57
+Humidity: 67.0
+Main: Clouds
+http://openweathermap.org/img/wn/04d@2x.png
+
 
 ## Using a Webhook
 Usually you’d want to use a webhook, if you’re providing a rest endpoint like this app does.
