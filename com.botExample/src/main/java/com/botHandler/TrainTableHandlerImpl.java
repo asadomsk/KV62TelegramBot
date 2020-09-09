@@ -1,6 +1,7 @@
 package com.botHandler;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,34 +14,31 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import com.botExample.POJO.KV62Bot;
+import com.botTrainTable.TrainTable;
 import com.botWeather.Model;
 import com.botWeather.Weather;
 
 @Component
-public class WeatherHandlerImpl extends Handler {
+public class TrainTableHandlerImpl extends Handler {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	private Weather weather = new Weather();
+	@Autowired
+	private TrainTable trains;
 
 	@Override
 	public String Execute(String message) {
 
-		int indexOf = message.indexOf(' ');
-		if (indexOf > -1) {
-			String queryString = message.substring(indexOf + 1);
-			logger.info("Serching weather for: " + queryString);
-			return weather.getWeather(queryString, new Model());
-		} else {
-			logger.info("weather command: city should be entered after bot name and space");
-		} // TODO
-		return null;
+		return trains.getTrains("java", "19.08.2020", "2004000", new Model()); //TODO
+
 	}
+	// TODO callback
+	// bot.executeAsync(method, callback); ??
 
 
 	@Override
 	public String getName() {
-		return "weather";
+		// TODO Auto-generated method stub
+		return "trains";
 	}
-
 }

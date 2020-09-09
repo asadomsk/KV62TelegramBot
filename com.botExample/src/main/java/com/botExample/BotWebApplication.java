@@ -10,10 +10,11 @@ import org.springframework.context.annotation.ComponentScan;
 }
 )
 public class BotWebApplication {
-
+    
 	public static void main(String[] args) throws Throwable {
 		SpringApplication.run(BotWebApplication.class, args);
-		
+
 	}
+	 
 
 }
