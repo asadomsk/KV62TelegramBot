@@ -1,19 +1,21 @@
 # KV62TelegramBot
 (The bot is in the development)
 ##  KV62TelegramBot
-This Telegram bot can be used to get the weather forecast (in Json format) for your desired city from https://openweathermap.org/api
+This Telegram bot can be used:
+1. To get the weather forecast for your desired city from https://openweathermap.org/api
+2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
 
 ##  Reasons for using this Telegram Bot
-The idea is to create combined mobile assistant for quick and convenient fulfillment of the frequently used searches from different internet sites and for different fields of activity such as 
-to save the time. 
-Such as  weather forecast, train schedule, translator and so on..
+The idea is to create the combined mobile assistant for quick and convenient fulfillment of the frequently used searches from different internet sites and for different fields of activity such as weather forecast and trains schedule, translator and so on.. to save the time. 
 Is should be the real strong personal mobile assistant.
 
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
 
 
-WeatherKV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
+weather@KV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
+trains@KV62Bot (parameters serch is still in development stage) - Get the relevant trains schedule
+
 
 The Bot will return answer in the next format
 
@@ -22,6 +24,15 @@ Temperature: 13.57
 Humidity: 67.0
 Main: Clouds
 http://openweathermap.org/img/wn/04d@2x.png
+
+or 
+
+rainNumber: 501
+StationDepart: 4900
+TimeDepart: 14/09/2020 05:56:00
+StationArrival: 5000
+TimeArrival: 14/09/2020 06:11:00
+TimeInWay: 00:15:00
 
 
 ## Using a Webhook
