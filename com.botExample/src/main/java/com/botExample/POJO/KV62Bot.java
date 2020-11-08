@@ -38,6 +38,9 @@ public class KV62Bot extends TelegramWebhookBot {
 	@Autowired
 	private TrainTableHandlerImpl tr;// TODO
 
+	@Autowired
+	private TelegramFacade telegramFacade;
+
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	Map<String, Handler> commandsList;
@@ -54,52 +57,41 @@ public class KV62Bot extends TelegramWebhookBot {
 		commandsList = new HashMap<String, Handler>();
 		commandsList.put(wt.getName(), wt);
 		commandsList.put(tr.getName(), tr);
+
 	}
 
 	public BotApiMethod onWebhookUpdateReceived(Update update) {
-		if (update.hasMessage()) {
-			Message message = update.getMessage();
-			SendMessage response = new SendMessage();
-			Long chatId = message.getChatId();
-			response.setChatId(chatId);
-			String text = message.getText();
-			setButton(response);
-			
-			// getting command
-			int iend = text.indexOf("@");
-			String command;
-			if (iend != -1) // TODO else
-			{
-				command = text.substring(0, iend);
 
-				if (commandsList.get(command) != null) {
-					logger.info("contains commands :" + command);
-					
-					///reflection
-					if (commandsList.get(command) instanceof WeatherHandlerImpl) 
-						logger.info("WeatherHandlerImpl using reflection");
-					if (commandsList.get(command) instanceof TrainTableHandlerImpl) 
-						logger.info("TrainTableHandlerImpl using reflection");
-					
-					new Thread(() -> {
-						try {
-							response.setText(commandsList.get(command).Execute(text));
-							execute(response);
-							logger.info("started");
-							Thread.sleep(30000); // checking async
-							logger.info("Sent message \"{}\" to {}", text, chatId);
-						} catch (TelegramApiException e) {
-							logger.info("TelegramApiException" + e);// todo
-						} catch (InterruptedException e) {
-							logger.info("InterruptedException" + e);// todo
-						}
+		if (update.hasMessage() || update.hasCallbackQuery()) {
 
-					}).start();
+			new Thread(() -> {
+				try {
+					SendMessage response = new SendMessage();
+
+					response = telegramFacade.handleUpdate(update, commandsList);// TODO
+
+					// setButton(response);// check
+
+					execute(response);
+
+					logger.info("started");
+					Thread.sleep(30000); // checking async
+					if(update.hasMessage())
+					logger.info("Sent message \"{}\" to {}", update.getMessage(), update.getMessage().getChatId());
+					else    logger.info("Sent message \"{}\" to {}", update.getCallbackQuery().getMessage(), update.getCallbackQuery().getMessage().getChatId()); 
+				} catch (TelegramApiException e) {
+					logger.info("TelegramApiException" + e);// todo
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
+			}).start();
 
-			}else logger.info("bot name should be entered with @ befor name tie in command"); //TODO
-		} else logger.info("no comment has been sent"); //TODO
-		
+		}
+
+		else
+			logger.info("no message has been sent"); // TODO
+
 		return null;
 	}
 
@@ -107,11 +99,12 @@ public class KV62Bot extends TelegramWebhookBot {
 		return ap.getBotUserName();
 	}
 
+	// @Override
 	public String getBotPath() {
 		return ap.getBotPath();
 	}
 
-	@Override
+	// @Override
 	public String getBotToken() {
 		return ap.getBotToken();
 	}
@@ -119,7 +112,6 @@ public class KV62Bot extends TelegramWebhookBot {
 	public Map<String, Handler> getCommandsList() {
 		return commandsList;
 	}
-
 
 	/// Setting bot's keyboard
 
@@ -134,13 +126,14 @@ public class KV62Bot extends TelegramWebhookBot {
 		KeyboardRow keyboardFirstRow = new KeyboardRow();
 		keyboardFirstRow.add(new KeyboardButton("KV62Bot"));
 		keyboardFirstRow.add(new KeyboardButton("Weather"));
+		keyboardFirstRow.add(new KeyboardButton("Aaaaaa"));
 
 		keyboardRowList.add(keyboardFirstRow);
 		replyKeyboardMarkup.setKeyboard(keyboardRowList);
 
 	}
-	
-	//TODO 
-	//command contains Bot name
+
+	// TODO
+	// command contains Bot name
 
 }

@@ -1,14 +1,15 @@
 package com.botHandler;
 
 import org.springframework.stereotype.Component;
+import org.telegram.telegrambots.meta.api.objects.Update;
 
 
 @Component
-public abstract class Handler {
+public interface Handler {
 
-	public abstract String getName();
+     String getName();
 
-	public abstract String Execute(String message);
+     String Execute(Update update);
 
 	// TODO
 	// Hand start and help command
