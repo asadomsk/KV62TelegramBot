@@ -17,15 +17,16 @@ import com.botWeather.Model;
 import com.botWeather.Weather;
 
 @Component
-public class WeatherHandlerImpl extends Handler {
+public class WeatherHandlerImpl implements Handler {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	private Weather weather = new Weather();
 
 	@Override
-	public String Execute(String message) {
+	public String Execute(Update update) {
 
+		String message = update.getMessage().getText();
 		int indexOf = message.indexOf(' ');
 		if (indexOf > -1) {
 			String queryString = message.substring(indexOf + 1);
@@ -36,7 +37,6 @@ public class WeatherHandlerImpl extends Handler {
 		} // TODO
 		return null;
 	}
-
 
 	@Override
 	public String getName() {
