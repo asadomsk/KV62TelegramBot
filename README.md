@@ -14,8 +14,21 @@ Once the application is running from the IDE you can test it by navigating to ht
 
 
 weather@KV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
-trains@KV62Bot (parameters serch is still in development stage) - Get the relevant trains schedule
-
+trains@KV62Bot - Get the relevant trains schedule
+The Bot will ask the user the next interactive questions and will proceed his answers:
+1.Choose Language For Search: eng/heb/rus
+answer can be: eng@
+2. Enter beginning of Station Depart: Jer/Hai/Naz
+answer can be: Jer@
+3. Choose station number: (all the matches of user's request)
+1 - Jerusalem-Biblical Zoo
+2 - Jerusalem-Malha
+3 - Jerusalem - Yitzhak Navon
+answer can be 2@
+4. Choose date depart
+After this question the Bot will display interactive keyboard to choose the actial date for search..(InlineKeyboardButton class)
+...
+After collecting all the parameters for the final request, the Bot will show the closest times of the relevant trains
 
 The Bot will return answer in the next format
 
@@ -28,9 +41,9 @@ http://openweathermap.org/img/wn/04d@2x.png
 or 
 
 rainNumber: 501
-StationDepart: 4900
+StationDepart: Station Name
 TimeDepart: 14/09/2020 05:56:00
-StationArrival: 5000
+StationArrival: Station Name
 TimeArrival: 14/09/2020 06:11:00
 TimeInWay: 00:15:00
 
