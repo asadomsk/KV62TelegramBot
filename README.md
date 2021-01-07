@@ -22,6 +22,10 @@ This Telegram bot can be used:
 The idea is to create the combined mobile assistant for quick and convenient fulfillment of the frequently used searches from different internet sites and for different fields of activity such as weather forecast and trains schedule, translator and so on.. to save the time. 
 Is should be the real strong personal mobile assistant.
 
+## So how should you start?
+
+## לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי
+
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
 
