@@ -95,6 +95,9 @@ As soon as someone subscribes to the library membership, he automatically sends 
 And oh, you’re welcome!”, without you asking for it.  
 ### The question: Whom will you hire? :wink: 
 
+Webhooks are HTTP callbacks which are triggered by specific events. Whenever that trigger event occurs in the source site,  
+the webhook sees the event, collects the data, and sends it to the URL specified by you in the form of an HTTP request.  
+
 Since the telegram bot will send updates for the Bot to the external URL, a nice way to set the webhook is by using ngrok servise downloaded to the local machine.
 After running the ngrok.exe, you will get https saved url as a gateway from the local machine.
 The url should be updated at the Boot apps settings class and https://api.telegram.org/bot{your api token}/setWebhook should be send to Telegram server.
