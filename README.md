@@ -25,7 +25,13 @@ Is should be the real strong personal mobile assistant.
 ## So how should you start?
 
 # לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי
-![](Images/03b57814e13713da37.jfif)  
+<img src = "Images/03b57814e13713da37.jfif" width =200> 
+
+Use the **/newbot** command to create a new bot. Choose name and username for your bot. The BotFather will generate an authorization token and breath a life into your new Bot.   
+The token required to send requests to the Bot API.   
+Store your token safly.   
+I keep it in the heart of my app - **AppSettings class.**  
+
 
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
