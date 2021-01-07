@@ -1,5 +1,18 @@
 # KV62TelegramBot
-(The bot is in the development)
+
+![](Images/Tutanchamun.jpg)
+
+Kings' Valley No. 62.  
+Tomb of young pharaoh Tutankhamun in the Valley of the Kings.  
+I was just thinking how to call the bot when I watched the film about the descovering Tutankhamun's tomb.  
+It's really cool. Such an inspiring story! I think people need to believe in themselves more and then the great things will happen.  
+
+## Finding king Tut's tomb
+For years Howard Carter and his team scoured the rocky landscape, scarred with the trenches of previous digs.   
+Discoveries were thin on the ground. In 1922 a frustrated Lord Carnarvon informed Carter he would not continue to finance the work.   
+Carter pleaded with him to reconsider; moved by his passion, Carnarvon agreed to fund one last season.   
+On November 1, 1922, Carter resumed digging in the Valley of the Kings. On November 4, they found the stairway that led to the unopened tomb of Tutankhamun - the 20th century's most famous find.  
+
 ##  KV62TelegramBot
 This Telegram bot can be used:
 1. To get the weather forecast for your desired city from https://openweathermap.org/api
