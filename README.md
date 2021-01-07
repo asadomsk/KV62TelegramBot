@@ -27,6 +27,7 @@ Is should be the real strong personal mobile assistant.
 # לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי
 <img src = "Images/03b57814e13713da37.jfif" width =200> 
 BotFather is the one bot to rule them all. It will help you create new bots and change settings for existing ones.  
+
 Use the **/newbot** command to create a new bot. Choose name and username for your bot. The BotFather will generate an authorization token and breath a life into your new Bot.   
 The token required to send requests to the Bot API.   
 Store your token safly.   
