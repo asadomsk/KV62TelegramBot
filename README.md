@@ -61,8 +61,12 @@ TimeArrival: 14/09/2020 06:11:00
 TimeInWay: 00:15:00
 
 
-## Using a Webhook
-Usually you’d want to use a webhook, if you’re providing a rest endpoint like this app does.
+## Using Webhooks  
+Telegram Bot API currently supports two ways of processing bot updates, getUpdates and setWebhook. getUpdates is a pull mechanism, setwebhook is push.  
+## https://api.telegram.org/bot(mytoken)/setWebhook?url=https://mywebpagetorespondtobot
+
+## https://api.telegram.org/bot(yourtoken)/getUpdates
+
 
 Since the telegram bot will send updates for the Bot to the external URL, a nice way to set the webhook is by using ngrok servise downloaded to the local machine.
 After running the ngrok.exe, you will get https saved url as a gateway from the local machine.
