@@ -61,7 +61,8 @@ TimeArrival: 14/09/2020 06:11:00
 TimeInWay: 00:15:00
 
 
-## Using Webhooks  
+## Using Webhooks
+![](Images/how-webhooks-work.png)  
 Telegram Bot API currently supports two ways of processing bot updates, getUpdates and setWebhook. getUpdates is a pull mechanism, setwebhook is push. 
 
 https://api.telegram.org/bot(yourtoken)/setWebhook?url=https://mywebpagetorespondtobot
@@ -70,6 +71,18 @@ https://api.telegram.org/bot(yourtoken)/getUpdates
 
 Setting a webhook means you supplying Telegram with a location in the form of a URL, on which your bot listens for updates. 
 
+### So, why Webhooks??    
+Imagine you’re the owner of a little library but you’re a busy person.   
+So you decide to get yourself an assistant, who will keep you regularly updated with the goings-on in the library.  
+Two people sign up for the interview; two very different people.  
+
+1. There’s Mr. Andrew P. Isaac (aka API), a very efficient assistant, who gives you answers – when you ask him. 
+So if you call him up and ask him “Hey! Has anyone subscribed today? Thanks!”, you’ll get the numbers that you’re looking for.  
+2. Then there’s Mr. Webster Hooks (aka Webhooks), who does things a bit differently.  
+As soon as someone subscribes to the library membership, he automatically sends you a message saying,  
+“Hey! Sam Harris from Florida has signed up for your Platinum plan. Here’s more information about him!  
+And oh, you’re welcome!”, without you asking for it.  
+### The question: Whom will you hire? :wink: 
 
 Since the telegram bot will send updates for the Bot to the external URL, a nice way to set the webhook is by using ngrok servise downloaded to the local machine.
 After running the ngrok.exe, you will get https saved url as a gateway from the local machine.
