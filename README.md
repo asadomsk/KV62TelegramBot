@@ -30,7 +30,7 @@ BotFather is the one bot to rule them all. It will help you create new bots and 
 
 Use the **/newbot** command to create a new bot. Choose name and username for your bot. The BotFather will generate an authorization token and breath a life into your new Bot.   
 The token required to send requests to the Bot API.   
-Store your token safly.   
+Store your token safely.   
 I keep it in the heart of my app - **AppSettings class.**  
 
 
@@ -99,9 +99,13 @@ And oh, you’re welcome!”, without you asking for it.
 Webhooks are HTTP callbacks which are triggered by specific events. Whenever that trigger event occurs in the source site,  
 the webhook sees the event, collects the data, and sends it to the URL specified by you in the form of an HTTP request.  
 
-Since the telegram bot will send updates for the Bot to the external URL, a nice way to set the webhook is by using ngrok servise downloaded to the local machine.
-After running the ngrok.exe, you will get https saved url as a gateway from the local machine.
-The url should be updated at the Boot apps settings class and https://api.telegram.org/bot{your api token}/setWebhook should be send to Telegram server.
+## Ngrok - tunnels
+<img src = "Images/1024px-14-46-35-f-mutzig.jpg" width =200>     
+Since our application runs on localhost, we need an utility to create secure tunnels to expose it over the web.  
+Ngrok provides a publicly accessible web URL to locally hosted application.   
+All you need is ngrok executable on your local machine that will initiate a tunnel to the localhost on the desired port.    
+Once ngrok sets up the tunnel, it provides a web-accessible URL. And we will share it with the end-users who would hit the locally hosted application.  
+i.e Telegram Bot API that will send the webhooks :point_up: :point_up: :point_up: to this URL (a subdomain of ngrok.com).  
 
 ## Asynchronous commands
 Since the bot was planned to be multiple function assistance, it has been buit to answer asynchronous to several commands at the same time.
