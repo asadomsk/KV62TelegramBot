@@ -20,8 +20,8 @@ This Telegram bot can be used:
 2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
 
 ##  Reasons for using this Telegram Bot
-The idea is to create a combined mobile assistant for quickly and conveniently performing frequently used searches on different internet sites and for various fields of activity, such as weather forecast and train timetables, translator, etc., to save time.
-It should be a real strong personal mobile assistant.
+The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity, such as weather forecast and train timetables, translator, etc., to save time.
+It should be a really strong personal mobile assistant.
 
 ## So how should you start to create your own Telegram Bot?
 
@@ -32,7 +32,7 @@ BotFather is the one bot to rule them all. It will help you create new bots and 
 Use the **/newbot** command to create a new bot. Choose a name and username for your bot. The BotFather will generate an authorization token and give life to your Bot.    
 The token is required to authorize the bot and send requests to the Bot API.     
 Keep your token secure and store it safely, it can be used by anyone to control your bot.    
-I keep it the heart of my app - **AppSettings class.**    
+I keep it at the heart of my app - **AppSettings class.**    
 
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
