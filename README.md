@@ -34,14 +34,6 @@ The token is required to authorize the bot and send requests to the Bot API.
 Keep your token secure and store it safely, it can be used by anyone to control your bot.    
 I keep it the heart of my app - **AppSettings class.**    
 
-
-BotFather is the only bot that rules them all. This will help you create new bots and change settings for existing ones.
-
-Use the ** / newbot ** command to create a new bot. Choose a name and login for your bot. BotFather will generate an authorization token and breathe life into your new bot.
-The token is required to send requests to the Bot API.
-Store your token in a safe place.
-I keep it at the center of my application - ** the AppSettings class. **
-
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
 
