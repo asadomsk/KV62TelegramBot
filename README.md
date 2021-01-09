@@ -108,6 +108,6 @@ Once ngrok sets up the tunnel, it provides a web-accessible URL. And we will sha
 i.e Telegram Bot API that will send the webhooks :point_up: :point_up: :point_up: to this URL (a subdomain of ngrok.com).  
 
 ## Asynchronous commands
-Since the bot was planned to be multiple function assistance, it has been buit to answer asynchronous to several commands at the same time.
+Since the bot was planned to be multiple function assistance, it has been buit to answer asynchronously to several commands at the same time.
 The bot answers only to the commansd that directed only to him, in order to participate in the chats where the same commands can be sent to different bots
 
