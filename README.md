@@ -3,15 +3,16 @@
 ![](Images/Tutanchamun.jpg)
 
 Kings' Valley No. 62.  
-Tomb of young pharaoh Tutankhamun in the Valley of the Kings.  
-I was just thinking how to call the bot when I watched the film about the descovering Tutankhamun's tomb.  
+The tomb of young pharaoh Tutankhamun in the Valley of the Kings.  
+I had been just thinking how to call my bot when I watched the film about discovering Tutankhamun's tomb.  
 It's really cool. Such an inspiring story! I think people need to believe in themselves more and then the great things will happen.  
 
 ## Finding king Tut's tomb
 For years Howard Carter and his team scoured the rocky landscape, scarred with the trenches of previous digs.   
 Discoveries were thin on the ground. In 1922 a frustrated Lord Carnarvon informed Carter he would not continue to finance the work.   
 Carter pleaded with him to reconsider; moved by his passion, Carnarvon agreed to fund one last season.   
-On November 1, 1922, Carter resumed digging in the Valley of the Kings. On November 4, they found the stairway that led to the unopened tomb of Tutankhamun - the 20th century's most famous find.  
+On November 1, 1922, Carter resumed digging in the Valley of the Kings. On November 4, they found the stairway that led to the unopened tomb of Tutankhamun.
+It was the 20th century's most famous find.  
 
 ##  KV62TelegramBot
 This Telegram bot can be used:
@@ -19,20 +20,27 @@ This Telegram bot can be used:
 2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
 
 ##  Reasons for using this Telegram Bot
-The idea is to create the combined mobile assistant for quick and convenient fulfillment of the frequently used searches from different internet sites and for different fields of activity such as weather forecast and trains schedule, translator and so on.. to save the time. 
-Is should be the real strong personal mobile assistant.
+The idea is to create a combined mobile assistant for quickly and conveniently performing frequently used searches on different internet sites and for various fields of activity, such as weather forecast and train timetables, translator, etc., to save time.
+It should be a real strong personal mobile assistant.
 
-## So how should you start?
+## So how should you start to create your own Telegram Bot?
 
 # לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי
 <img src = "Images/03b57814e13713da37.jfif" width =200> 
-BotFather is the one bot to rule them all. It will help you create new bots and change settings for existing ones.  
+BotFather is the one bot to rule them all. It will help you create new bots and change settings for existing ones.    
 
-Use the **/newbot** command to create a new bot. Choose name and username for your bot. The BotFather will generate an authorization token and breath a life into your new Bot.   
-The token required to send requests to the Bot API.   
-Store your token safely.   
-I keep it in the heart of my app - **AppSettings class.**  
+Use the **/newbot** command to create a new bot. Choose a name and username for your bot. The BotFather will generate an authorization token and give life to your Bot.    
+The token is required to authorize the bot and send requests to the Bot API.     
+Keep your token secure and store it safely, it can be used by anyone to control your bot.    
+I keep it the heart of my app - **AppSettings class.**    
 
+
+BotFather is the only bot that rules them all. This will help you create new bots and change settings for existing ones.
+
+Use the ** / newbot ** command to create a new bot. Choose a name and login for your bot. BotFather will generate an authorization token and breathe life into your new bot.
+The token is required to send requests to the Bot API.
+Store your token in a safe place.
+I keep it at the center of my application - ** the AppSettings class. **
 
 ## Use the Application
 Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
