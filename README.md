@@ -20,8 +20,8 @@ This Telegram bot can be used:
 2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
 
 ##  Reasons for using this Telegram Bot
-The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity, such as weather forecast and train timetables, translator, etc., to save time.
-It should be a really strong personal mobile assistant.
+The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity. Typical applications would be weather forecast and train timetables, translator, etc., to save time.
+It should be a really effective personal mobile assistant.
 
 ## So how should you start to create your own Telegram Bot?
 
