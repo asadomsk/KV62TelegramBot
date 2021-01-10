@@ -17,14 +17,17 @@ It was the 20th century's most famous find.
 ##  KV62TelegramBot
 This Telegram bot can be used:
 1. To get the weather forecast for your desired city from https://openweathermap.org/api
-<img src = "Images/weather.jpg" width =300>  
+<img src = "Images/weather.jpg" width =400>  
 
 2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
-<img src = "Images/trains.jpg" width =300>  
+<img src = "Images/trains.jpg" width =400>  
 
 ##  Reasons for using this Telegram Bot
 The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity. Typical applications would be weather forecast and train timetables, translator, etc., to save time.
 It should be a really effective personal mobile assistant.
+
+## Build status
+KV62 is currently under development and runs on a local machine. More features will be added to the bot in the future.
 
 ## So how should you start to create your own Telegram Bot?
 
@@ -37,9 +40,10 @@ The token is required to authorize the bot and send requests to the Bot API.
 Keep your token secure and store it safely, it can be used by anyone to control your bot.    
 I keep it at the heart of my app - **AppSettings class.**    
 
-## Use the Application
-Once the application is running from the IDE you can test it by navigating to http://localhost:8080/, which is used to poll your messages/commands.
-
+## How to use the Application?
+1. Run the application on your local machine 
+2. Run Ngrok.exe and write the command: **ngrok http 8080** (if the application is exposed on 8080)  
+Ngrok will display a UI in your terminal with the public URL of your tunnel and other status and metrics information about connections made over your tunnel  
 
 weather@KV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
 trains@KV62Bot - Get the relevant trains schedule
