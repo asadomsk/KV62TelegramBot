@@ -43,9 +43,16 @@ I keep it at the heart of my app - **AppSettings class.**
 ## How to use the Application?
 1. Run the application on your local machine 
 2. Run Ngrok.exe and write the command: **ngrok http 8080** (if the application is exposed on 8080)  
-Ngrok will display a UI in your terminal with the public URL of your tunnel and other status and metrics information about connections made over your tunnel  
+Ngrok will display a UI in your terminal with the public URL of your tunnel and other status and metrics information about connections made over your tunnel
+<img src = "ngrok-tunnel.jpg" width =400>  
+3. Use setWebhook method to specify a url and receive incoming updates 
+https://api.telegram.org/botyourtoken/setWebhook?url=yourURL  
 
-weather@KV62Boot {City name} - Get the current day overview from https://openweathermap.org/api
+Find the bot in the Telegram chat app - **@KV62** or add it to your Telegram chat group
+
+For the current day overview from https://openweathermap.org/api enter:   
+**weather@KV62Boot {City name}**  
+
 trains@KV62Bot - Get the relevant trains schedule
 The Bot will ask the user the next interactive questions and will proceed his answers:
 1.Choose Language For Search: eng/heb/rus
