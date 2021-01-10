@@ -17,7 +17,10 @@ It was the 20th century's most famous find.
 ##  KV62TelegramBot
 This Telegram bot can be used:
 1. To get the weather forecast for your desired city from https://openweathermap.org/api
+<img src = "Images/weather.jpg" width =300>  
+
 2. Get the trains schedule from departure station to arrived station from https://www.rail.co.il/
+<img src = "Images/trains.jpg" width =300>  
 
 ##  Reasons for using this Telegram Bot
 The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity. Typical applications would be weather forecast and train timetables, translator, etc., to save time.
