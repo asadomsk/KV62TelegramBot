@@ -50,7 +50,7 @@ https://api.telegram.org/botyourtoken/setWebhook?url=yourURL
 
 Find the bot in the Telegram chat app - **@KV62** or add it to your Telegram chat group
 
-For the current day overview from https://openweathermap.org/api enter:   
+For the current day weather forecast overview from https://openweathermap.org/api enter:   
 **weather@KV62Boot {City name}**  
 
 trains@KV62Bot - Get the relevant trains schedule
