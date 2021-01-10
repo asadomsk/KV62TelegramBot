@@ -53,12 +53,12 @@ Find the bot in the Telegram chat app - **@KV62** or add it to your Telegram cha
 For the current day weather forecast overview from https://openweathermap.org/api enter:   
 **weather@KV62Boot {City name}**
 
-![Jerusalem](Images/jer.jpeg)   
+<img src = "Images/jer.jpeg" width =300>  
 
-![London](Images/lon.jpeg) 
+<img src = "Images/lon.jpeg" width =300>  
 
-![Alaska](Images/ala.jpeg)   
-
+<img src = "Images/ala.jpeg" width =300>   
+  
 
 trains@KV62Bot - Get the relevant trains schedule
 The Bot will ask the user the next interactive questions and will proceed his answers:
