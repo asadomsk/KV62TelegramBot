@@ -44,7 +44,7 @@ I keep it at the heart of my app - **AppSettings class.**
 1. Run the application on your local machine 
 2. Run Ngrok.exe and write the command: **ngrok http 8080** (if the application is exposed on 8080)  
 Ngrok will display a UI in your terminal with the public URL of your tunnel and other status and metrics information about connections made over your tunnel
-<img src = "ngrok-tunnel.jpg" width =400>  
+<img src = "tunnels.jpg" width =400>  
 3. Use setWebhook method to specify a url and receive incoming updates 
 https://api.telegram.org/botyourtoken/setWebhook?url=yourURL  
 
