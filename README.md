@@ -23,7 +23,7 @@ This Telegram bot can be used:
 <img src = "Images/trains.jpg" width =400>  
 
 ##  Reasons for using this Telegram Bot
-The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity. Typical applications would be weather forecast and train timetables, translator, etc., to save time.
+The idea is to create a combined mobile assistant for quickly and easily performing frequently used searches on different internet sites and for various fields of activity. Typical activities would be weather forecast and train timetables, translator, etc., to save time.
 It should be a really effective personal mobile assistant.
 
 ## Build status
@@ -50,7 +50,7 @@ https://api.telegram.org/botyourtoken/setWebhook?url=yourURL
 
 Find the bot in the Telegram chat app - **@KV62** or add it to your Telegram chat group
 
-For the current day weather forecast overview from https://openweathermap.org/api enter:   
+For current day weather forecast overview from https://openweathermap.org/api enter:   
 **weather@KV62Boot {City name}**
 
 <img src = "Images/jer.jpeg" width =300>  
@@ -59,24 +59,33 @@ For the current day weather forecast overview from https://openweathermap.org/ap
 
 <img src = "Images/ala.jpeg" width =300>   
   
-
-trains@KV62Bot - Get the relevant trains schedule
+For train timetables from https://www.rail.co.il/ do next: 
+**trains@KV62Bot**  
 The Bot will ask the user the next interactive questions and will proceed his answers:
 1.Choose Language For Search: eng/heb/rus
-answer can be: eng@
+An answer can be: eng@KV62
 2. Enter beginning of Station Depart: Jer/Hai/Naz
-answer can be: Jer@
+An answer can be: Jer@KV62
 3. Choose station number: (all the matches of user's request)
 1 - Jerusalem-Biblical Zoo
 2 - Jerusalem-Malha
 3 - Jerusalem - Yitzhak Navon
-answer can be 2@
+An answer can be 2@KV62
 4. Choose date depart
 After this question the Bot will display interactive keyboard to choose the actial date for search..(InlineKeyboardButton class)
 ...
 After collecting all the parameters for the final request, the Bot will show the closest times of the relevant trains
 
-The Bot will return answer in the next format
+<img src = "Images/tr1.jpeg" width =300>    
+
+<img src = "Images/tr2.jpeg" width =300>    
+
+<img src = "Images/tr3.jpeg" width =300>   
+
+<img src = "Images/tr4.jpeg" width =300>   
+
+
+**The Bot will return answer in the next format**  
 
 City: Saint Petersburg
 Temperature: 13.57
