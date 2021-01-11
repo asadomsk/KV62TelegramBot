@@ -59,22 +59,22 @@ For current day weather forecast overview from https://openweathermap.org/api en
 
 <img src = "Images/ala.jpeg" width =300>   
   
-For train timetables from https://www.rail.co.il/ do next: 
-**trains@KV62Bot**  
-The Bot will ask the user the next interactive questions and will proceed his answers:
-1.Choose Language For Search: eng/heb/rus
-An answer can be: eng@KV62
-2. Enter beginning of Station Depart: Jer/Hai/Naz
-An answer can be: Jer@KV62
-3. Choose station number: (all the matches of user's request)
-1 - Jerusalem-Biblical Zoo
-2 - Jerusalem-Malha
-3 - Jerusalem - Yitzhak Navon
-An answer can be 2@KV62
-4. Choose date depart
-After this question the Bot will display interactive keyboard to choose the actial date for search..(InlineKeyboardButton class)
+For the train timetables from https://www.rail.co.il/ do next:   
+**trains@KV62Bot**    
+The Bot will ask the user the next interactive questions and will proceed his answers:  
+1.Choose Language For Search: eng/heb/rus  
+An answer can be: eng@KV62  
+2. Enter beginning of Station Depart: Jer/Hai/Naz  
+An answer can be: Jer@KV62  
+3. Choose station number: (all the matches of user's request)  
+1 - Jerusalem-Biblical Zoo  
+2 - Jerusalem-Malha  
+3 - Jerusalem - Yitzhak Navon  
+An answer can be 2@KV62  
+4. Choose date depart  
+After this question the Bot will display interactive keyboard to choose the actial date for search..(InlineKeyboardButton class)  
 ...
-After collecting all the parameters for the final request, the Bot will show the closest times of the relevant trains
+After collecting all the parameters for the final request, the Bot will show the closest times of the relevant trains  
 
 <img src = "Images/tr1.jpeg" width =300>    
 
@@ -85,25 +85,25 @@ After collecting all the parameters for the final request, the Bot will show the
 <img src = "Images/tr4.jpeg" width =300>   
 
 
-**The Bot will return answer in the next format**  
+**The Bot will return answer in the next format**    
 
-City: Saint Petersburg
-Temperature: 13.57
-Humidity: 67.0
-Main: Clouds
-http://openweathermap.org/img/wn/04d@2x.png
+City: Saint Petersburg  
+Temperature: 13.57  
+Humidity: 67.0  
+Main: Clouds  
+http://openweathermap.org/img/wn/04d@2x.png  
 
-or 
+or   
 
-rainNumber: 501
-StationDepart: Station Name
-TimeDepart: 14/09/2020 05:56:00
-StationArrival: Station Name
-TimeArrival: 14/09/2020 06:11:00
-TimeInWay: 00:15:00
+rainNumber: 501  
+StationDepart: Station Name  
+TimeDepart: 14/09/2020 05:56:00  
+StationArrival: Station Name  
+TimeArrival: 14/09/2020 06:11:00  
+TimeInWay: 00:15:00  
 
 
-## Using Webhooks
+## Using Webhooks  
 ![](Images/how-webhooks-work.png)  
 Telegram Bot API currently supports two ways of processing bot updates, getUpdates and setWebhook. getUpdates is a pull mechanism, setwebhook is push. 
 
